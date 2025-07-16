@@ -11,3 +11,20 @@ __pycache__/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# === Logs and Temp Files ===
+*.log
+*.tmp
+
+# === Model Files (Optional, if large) ===
+*.pkl
+
+# === Training Data ===
+samples/training_pcaps/
+
+# === Dataset Outputs ===
+dataset_builder/labeled_data.*
+dataset_builder/features.csv
+
+# === Jupyter Notebooks (optional, if you're not sharing them) ===
+*.ipynb_checkpoints/
