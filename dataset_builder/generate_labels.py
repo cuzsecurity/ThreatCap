@@ -28,6 +28,12 @@ family_category_map = {
     "probe": "Reconnaissance",
     "webserver": "Reconnaissance",
     "ransom": "Ransomware",
+    "EK": "ExploitKit",
+    "exploitkit": "ExploitKit",
+    "rigek": "ExploitKit",
+    "nuclear": "ExploitKit",
+    "angler": "ExploitKit",
+    "neutrino": "ExploitKit"
     # Phishing indicators (family will be blank)
     "phish": "Phishing",
     "phishing": "Phishing",
@@ -47,7 +53,10 @@ def infer_labels(filename):
                 return "", category
             else:
                 return keyword, category
-    return "", ""
+
+    # If no keyword is matched, fallback to generic malware:
+    return "", "Malware"
+
 
 if __name__ == "__main__":
     matched, unmatched = 0, []
